@@ -1,5 +1,4 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   OnInit
 } from "@angular/core";
@@ -11,11 +10,11 @@ export interface Post {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'app-components',
+  templateUrl: './components.component.html',
+  styleUrls: ['./components.component.css'],
 })
-export class AppComponent implements OnInit{
+export class ComponentsComponent implements OnInit{
   title = 'angular';
 
   public posts: Post[] = [
