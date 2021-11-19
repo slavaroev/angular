@@ -1,0 +1,19 @@
+<p>{{ 20 | mult: 4 }}</p>
+<p>{{ 'exMarks     ' | exMarks }}</p>
+
+<hr>
+
+<input type="text" class="form-control" [(ngModel)]="search">
+<button class="btn" (click)="searchField = 'title'">Search title</button>
+<button class="btn" (click)="searchField = 'text'">Search text</button>
+<button class="btn" (click)="addNews()">Add news</button>
+
+<hr>
+
+<div
+  *ngFor="let post of news | newsFilter: search: searchField"
+  class="card"
+>
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.text }}</p>
+</div>
