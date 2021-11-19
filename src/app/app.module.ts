@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from "./components/components.module";
 import { DirectivesModule } from "./directives/directives.module";
+import { ServicesModule } from "./services/services.module";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { DirectivesModule } from "./directives/directives.module";
   imports: [
     BrowserModule,
     ComponentsModule,
-    DirectivesModule
+    DirectivesModule,
+    ServicesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

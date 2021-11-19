@@ -1,0 +1,12 @@
+<div class="card">
+  <h3>Global service in counter component</h3>
+  <p>{{ counter.counter }}</p>
+  <button class="btn" (click)="counter.plus()">Plus</button>
+  <button class="btn" (click)="counter.minus()">Minus</button>
+</div>
+<div class="card">
+  <h3>Local service in counter component</h3>
+  <p>{{ localCounter.counter }}</p>
+  <button class="btn" (click)="localCounter.plus()">Plus</button>
+  <button class="btn" (click)="localCounter.minus()">Minus</button>
+</div>
