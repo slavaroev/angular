@@ -1,0 +1,12 @@
+span {
+  display: inline-block;
+  transition: 1s;
+}
+
+.rotate {
+  transform: rotate(20deg);
+}
+
+.scale {
+  transform: scale(1.1);
+}

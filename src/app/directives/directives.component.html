@@ -1,0 +1,12 @@
+<span appStyle="rotate">directives style!</span>
+<span appStyle="scale">directives style!</span>
+<span appStyle="none" [fontStyles]="{size: '30px', weight: 'bold', decoration: 'underline'}">directives style!</span>
+<hr>
+<button class="btn" (click)="isVisible = !isVisible">toggle</button>
+<p *ngIf="isVisible">Structure directive *ngIf</p>
+<hr>
+<ng-template [ngIf]="isVisible">
+  <p>Structure directive [ngIf]</p>
+</ng-template>
+<hr>
+<p *appIfNot="isVisible">Structure directive appIfNot</p>
