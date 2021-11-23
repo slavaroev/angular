@@ -14,6 +14,7 @@ import { MyValidators } from "./my.validators";
 })
 export class FormsComponent implements OnInit {
   public form!: FormGroup;
+  switchState = 'on';
 
   constructor() { }
 
@@ -22,8 +23,9 @@ export class FormsComponent implements OnInit {
       email: new FormControl('', [
         Validators.required,
         Validators.email,
-        MyValidators.restrictedEmails
+        MyValidators.restritedEmails
       ]),
+      // ], [ MyValidators.uniqEmails ]),
       password: new FormControl(null, [
         Validators.required,
         Validators.minLength(6)
@@ -39,7 +41,7 @@ export class FormsComponent implements OnInit {
   submit() {
     if (this.form.valid) {
       const formData = { ...this.form.value };
-      console.log(formData);
+      this.form.reset();
     }
   }
 
@@ -62,5 +64,9 @@ export class FormsComponent implements OnInit {
 
   getControls() {
     return (this.form.get('skills') as FormArray).controls;
+  }
+
+  handleChange() {
+    console.log(this.switchState);
   }
 }

@@ -1,4 +1,12 @@
 <div class="container">
+  <div class="card">
+    <app-switch
+      [(ngModel)]="switchState"
+      (ngModelChange)="handleChange()"
+    ></app-switch>
+    <p>{{ switchState }}</p>
+  </div>
+
   <form class="card" [formGroup]="form" (ngSubmit)="submit()">
     <h1>Angular Forms</h1>
 
@@ -11,7 +19,8 @@
       >
         <small *ngIf="form.controls['email'].hasError('required')">Email field can't be empty</small>
         <small *ngIf="form.controls['email'].hasError('email')">Enter correct email</small>
-        <small *ngIf="form.controls['email'].hasError('restrictedEmail')">Email '{{ form.controls['email'].value }}' already use</small>
+        <small *ngIf="form.controls['email'].hasError('restrictedEmail')">This email {{ form.controls['email'].value }} already use</small>
+<!--        <small *ngIf="form.controls['email'].hasError('uniqEmail')">This email {{ form.controls['email'].value }} isn't uniq</small>-->
       </div>
     </div>
 
@@ -59,7 +68,7 @@
       </div>
     </div>
 
-    <button class="btn" type="submit" [disabled]="form.invalid">Отправить</button>
+    <button class="btn" type="submit" [disabled]="form.invalid || form.pending">Отправить</button>
 
   </form>
 </div>

@@ -5,12 +5,14 @@ import {
   ReactiveFormsModule
 } from "@angular/forms";
 import { FormsComponent } from './forms/forms.component';
+import { SwitchComponent } from './switch/switch.component';
 
 
 
 @NgModule({
   declarations: [
-    FormsComponent
+    FormsComponent,
+    SwitchComponent
   ],
   exports: [
     FormsComponent
