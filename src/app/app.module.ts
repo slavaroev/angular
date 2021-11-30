@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from "./components/components.module";
 import { DirectivesModule } from "./directives/directives.module";
 import { AppFormsModule } from "./forms/app-forms.module";
+import { RoutesModule } from "./routes/routes.module";
 import { ServicesModule } from "./services/services.module";
 import { PipesModule } from "./pipes/pipes.module";
 
@@ -20,7 +21,8 @@ import { PipesModule } from "./pipes/pipes.module";
     DirectivesModule,
     ServicesModule,
     PipesModule,
-    AppFormsModule
+    AppFormsModule,
+    RoutesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
